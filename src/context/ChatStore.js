@@ -1,24 +1,36 @@
 import React, { createContext, useEffect, useState } from 'react';
 import { Navigate } from 'react-router-dom';
+import { apiheader, GetData } from '../utils/fetchData';
 
 
-export const ChatContext = createContext([])
+export const VendersContext = createContext([])
 
-function ChatStore({ children }) {
-  const [userReplied, setUserReplied] = useState(null); 
+function VenderContext({ children }) {
+  const [isOpen, setIsOpen] = useState(true);
+  const [userId, setUser] = useState(''); 
+ 
+
   
-  useEffect(() => {
-    console.log(userReplied);
-  }, [])
+  const toggle = () => setIsOpen(!isOpen);
+  function LogOut() {
+    localStorage.removeItem('token')
+    localStorage.removeItem("IDUser");
+    return <Navigate to="/auth/login" replace={true} />
+  }
 
+  useEffect(() => {
+    setUser(localStorage.getItem("IDUser"))
+  }, [userId])
+  useEffect(() => { 
+  }, [])
 
   return (
     <>
-      <ChatContext.Provider value={{setUserReplied ,userReplied}}>
+      <VendersContext.Provider value={{ setIsOpen, toggle, LogOut, userId }}>
         {children}
-      </ChatContext.Provider>
+      </VendersContext.Provider>
     </>
   )
 }
 
-export default ChatStore
+export default VenderContext

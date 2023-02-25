@@ -1,4 +1,15 @@
 @import '../../style/varibale';
+:root {
+    --mainColor: rgba(32, 187, 175, 1);
+    --secondColor: #3a2b6b;
+    --white: #fff;
+    --black: #000;
+    --transparent: transparent;
+    --input: #eee;
+    --firstBoxShadow: 0px 4px 6px rgba(147, 147, 147, 0.26);
+    --secondBoxShadow: 0px 4px 6px rgba(147, 147, 147, 0.5);
+    --thirdBoxShadow: 0px 4px 6px rgba(147, 147, 147, 0.75);
+}
 
 .main-container {
     display: flex;
@@ -6,8 +17,7 @@
 
     @media screen and (max-width:600px) {
         // display: none;
-    }
-
+    } 
     main {
         padding: 10px;
     }
@@ -15,8 +25,7 @@
 
 /* Sidebar */
 .sidebar {
-    color: white;
-
+    color: var(--mainColor);
     // background-color: $colorDark;
     .top_section {
         display: flex;
@@ -24,22 +33,28 @@
         justify-content: space-between;
         padding: 15px 18px;
 
+        // .logo {
+        //     font-size: 18px;
+        //     line-height: 0;
+        //     padding: 30px 60px 0px 60px;
+
+        // }
         .logo {
             font-size: 18px;
             line-height: 0;
-            padding: 30px 60px 0px 60px;
+            padding: 30px 40px 0px 40px;
             width: 170px;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            color: $colorRed-0;
+            color: rgba(32, 187, 175, 1);
             user-select: none;
         }
 
         .bars {
             cursor: pointer;
-            color: $colorLight;
+            color: rgba(32, 187, 175, 1);
         }
     }
 }
@@ -52,13 +67,13 @@
 
     .link {
         display: flex;
-        color: $colorLight;
+        color: rgba(32, 187, 175, 1);
         gap: 10px;
         padding: 5px 18px;
         text-decoration: none;
         border-right: 4px solid transparent;
         transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
-
+        cursor: pointer;
         &:hover {
             // border-left: 4px solid $colorRed-0;
             transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
@@ -82,7 +97,6 @@
             white-space: nowrap;
             text-decoration: none !important;
             text-decoration: underline;
-
             font-family: $fontBase;
             font-style: normal;
             font-weight: 400;
@@ -112,7 +126,7 @@
 
     .menu {
         display: flex;
-        color: white;
+        color:rgba(32, 187, 175, 1);
         padding-right: 20px;
         transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
         justify-content: space-between;
@@ -175,13 +189,16 @@
 
 .side {
     height: 100%;
+    width: inherit;
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #000;
+    background-color:rgb(248,249,250);
+    opacity: 1;
     z-index: 99;
-    // overflow: scroll;
-    // overflow-x: hidden;
+    overflow: scroll;
+    overflow-x: hidden;
+    box-shadow: 1px 4px 4px rgb(147 147 147 / 95%);
     // display: none;
 }
 
@@ -197,3 +214,5 @@
         width: 100% !important;
     }
 }
+
+ 

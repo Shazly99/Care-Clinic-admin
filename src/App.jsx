@@ -67,7 +67,7 @@ function App() {
   const root = createBrowserRouter([
     {
       path: '/', element: <Component.Vendor />, children: [
-        { index: true, element: <ProtectedRoutes>  <Component.Dashboard /></ProtectedRoutes> },
+        { index: true, element: <ProtectedRoutes>  <Component.Users /></ProtectedRoutes> },
         {
           path: '/user', children: [
             { index: true, element: <ProtectedRoutes>  <Component.Users /> </ProtectedRoutes> },
