@@ -11,6 +11,11 @@ const routes = [
     name: "Users",
     icon: <Icons.user size={20} />,
   },
+  {
+    path: "/section2",
+    name: "Section 2",
+    icon: <Icons.user size={20} />,
+  },
 
 
 ];
