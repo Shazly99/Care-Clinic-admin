@@ -27,13 +27,6 @@ export default {
     UsersTable, 
     Edit, 
 
-    // Vendor Components Section 2 
-    AddSec2,
-    EditSec2,
-    Sec2, 
-    Sec2Table,
-    Loader,
-
 
     // Auth
     Login,

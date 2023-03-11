@@ -29,13 +29,13 @@ const AddSec2 = ({ baseURL }) => {
 
         // console.log({
         //     Body: body.current.value,
-        //     image: image.current.files[0],
+        //     images: image.current.files[0],
         //     Title: title.current.value,
         //     Lang: lang.current.value
         // })
         addHandeler({
             Body: body.current.value,
-            image: image.current.files[0],
+            images: image.current.files[0],
             Title: title.current.value,
             Lang: lang.current.value
         })
