@@ -1,19 +1,16 @@
-import React, { useContext, useState } from 'react'
+import { motion } from 'framer-motion';
+import React, { useContext, useState } from 'react';
+import { Nav, NavDropdown } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
-import './Navber.scss'
-import { Link } from 'react-router-dom';
-import { VendersContext } from './../../context/Store';
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
-import { motion } from 'framer-motion';
-import routes from './../Sidebar/route';
-import { Form, Nav, NavDropdown } from 'react-bootstrap';
-import { FaUserCircle, FaCog, FaPowerOff } from 'react-icons/fa';
-import { IoMdNotificationsOutline } from 'react-icons/io';
-import Img from '../../assets/Img';
 import { LinkContainer } from 'react-router-bootstrap';
+import { Link } from 'react-router-dom';
+import Img from '../../assets/Img';
 import Icons from '../../constants/Icons';
-import { InputGroup } from 'react-bootstrap';
+import { VendersContext } from './../../context/Store';
+import routes from './../Sidebar/route';
+import './Navber.scss';
 
 function Navber() {
   let { LogOut } = useContext(VendersContext);
@@ -31,7 +28,7 @@ function Navber() {
 
               {
                 Toggle && (
-                  <motion.div whileInView={{ x: [-300, 0] }} transition={{ duration: 1.5, ease: 'backOut' }} >
+                    <motion.div className='sidebarSm' whileInView={{ x: [-300, 0] }} transition={{ duration: 1.5, ease: 'backOut' }} >
                     <HiX onClick={() => setToggle(!Toggle)} />
                     <ul >
                       {routes.map((item, index) =>
