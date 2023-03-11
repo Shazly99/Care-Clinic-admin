@@ -79,8 +79,7 @@ const Login = () => {
                     <Row>
                         <Col xl={6} lg={6} xd={6} sm={12} className='vh-100'>
                             <div className='app__login-left  vh-100   '>
-                                <img src={Img.loginBg} />
-                                <Component.BaseHeader h1={'Baytrh'} colorW="logoBaytrh" />
+                                <img src={Img.logo} /> 
                                 <div className="w-75" >
                                     {
                                         !anthorWay ?
