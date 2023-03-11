@@ -20,7 +20,21 @@ a {
 
     }
 }
-
+.baseBtn1 {
+    padding: 20px;
+  
+    button {
+      font-family: $fontBase !important;
+      font-style: normal;
+      font-weight: 400 !important;
+      font-size: 18px !important;
+      line-height: 27px;
+      color: #FFFFFF;
+      gap: 12px;
+      padding: 12px 35px !important;
+      border: none;
+    }
+  }
 // button in folder (component / button ) shared in all project 
 .baseBtn {
     padding: 20px;
@@ -109,7 +123,7 @@ td {
         font-family: $fontBase;
         font-style: normal;
         font-weight: 400 !important;
-        font-size: 21px !important;
+        font-size: 16px !important;
         line-height: 32px !important;
         /* identical to box height */
         text-align: center;

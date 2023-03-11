@@ -1,6 +1,6 @@
 @import '../../style/varibale';
 :root {
-    --mainColor: rgba(32, 187, 175, 1);
+    --mainColor: #3a2b6b;
     --secondColor: #3a2b6b;
     --white: #fff;
     --black: #000;
@@ -48,13 +48,13 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            color: rgba(32, 187, 175, 1);
+            color: #3a2b6b;
             user-select: none;
         }
 
         .bars {
             cursor: pointer;
-            color: rgba(32, 187, 175, 1);
+            color: #3a2b6b;
         }
     }
 }
@@ -67,7 +67,7 @@
 
     .link {
         display: flex;
-        color: rgba(32, 187, 175, 1);
+        color: #3a2b6b;
         gap: 10px;
         padding: 5px 18px;
         text-decoration: none;
@@ -126,7 +126,7 @@
 
     .menu {
         display: flex;
-        color:rgba(32, 187, 175, 1);
+        color:#3a2b6b;
         padding-right: 20px;
         transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
         justify-content: space-between;

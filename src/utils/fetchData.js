@@ -3,14 +3,12 @@ import axios from "axios";
 export const apiheader = {
     headers: {
         'Content-Type': 'multipart/form-data',
-        'Authorization': 'Bearer ' + localStorage.getItem('token'),
-    }
-
+     } 
 };
 
 
-export const GetData = async (url, header) => {
-    let { data } = await axios.get(url, header);
+export const GetData = async (url) => {
+    let { data } = await axios.get(url);
     return data;
 }
 
