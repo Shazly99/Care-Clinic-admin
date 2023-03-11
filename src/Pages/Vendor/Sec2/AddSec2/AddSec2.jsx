@@ -1,14 +1,12 @@
 import React, { useRef } from 'react';
-import { useState, useEffect } from "react";
 import { Button, Col, Row } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Component from '../../../../constants/Component';
 import Icons from '../../../../constants/Icons';
-import 'react-phone-input-2/lib/style.css'
 import Form from 'react-bootstrap/Form';
-import { apiheader, PostData } from '../../../../utils/fetchData';
+import { apiheader } from '../../../../utils/fetchData';
 import { Link, useNavigate } from 'react-router-dom';
-import { Toaster, toast } from 'react-hot-toast';
+import { toast } from 'react-hot-toast';
 import axios from 'axios';
 
 
@@ -27,12 +25,6 @@ const AddSec2 = ({ baseURL }) => {
     const submit = e => {
         e.preventDefault()
 
-        // console.log({
-        //     Body: body.current.value,
-        //     images: image.current.files[0],
-        //     Title: title.current.value,
-        //     Lang: lang.current.value
-        // })
         addHandeler({
             Body: body.current.value,
             images: image.current.files[0],

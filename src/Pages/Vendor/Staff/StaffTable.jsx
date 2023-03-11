@@ -6,11 +6,11 @@ import oops from '../../../assets/Images/users/Z.jfif';
 import axios from 'axios';
 
 
-function Sec2Table({ usersList , getList , baseURL }) {
+function StaffTable({ usersList , getList , baseURL }) {
 
 
     const itemRemove = async (el) => {
-        await axios.post(`${baseURL}deletesection2?ID=${el}`, {}, apiheader)
+        await axios.post(`${baseURL}deletestaff?ID=${el}`, {}, apiheader)
         .then(res => {
             getList();
         })
@@ -30,9 +30,8 @@ function Sec2Table({ usersList , getList , baseURL }) {
             <Table responsive={true} className='rounded-3 '>
                 <thead>
                     <tr className='text-center  ' style={{ background: '#F9F9F9' }}>
-                        <th>Lang</th>
-                        <th>Title</th>
-                        <th>Body</th>
+                        <th>Name</th>
+                        <th>Desc</th>
                         <th>Image</th>
                         <th>Action</th>
                     </tr>
@@ -44,27 +43,18 @@ function Sec2Table({ usersList , getList , baseURL }) {
 
                                 <td >
                                     <div>
-                                        {item.Lang === '1' && "Arabic"}
-                                        {item.Lang === '2' && "English"}
-                                        {item.Lang === '3' && "French"}
-                                        {item.Lang === '4' && "Russian"}
-                                        {item.Lang === '5' && "Turkish"}
+                                        {item?.Name}
                                     </div>
                                 </td>
                                 <td >
                                     <div>
-                                        {item?.Title}
-                                    </div>
-                                </td>
-                                <td >
-                                    <div>
-                                        {item?.Body}
+                                        {item?.Desc}
                                     </div>
                                 </td>
                                 <td >
                                     <div style={{ width: '200px' , height: '120px'}}>
-                                        {item?.FilePath !== null && item?.FilePath !== undefined ? 
-                                            <img src={`https://cureclinckapi.amlakturks.com/storage/app/section2/${item?.FilePath}`} className='rounded-3 w-100 h-100' loading="lazy" alt="item-image" />
+                                        {item?.Image !== null && item?.Image !== undefined ? 
+                                            <img src={`https://cureclinckapi.amlakturks.com/storage/app/staff/${item?.Image}`} className='rounded-3 w-100 h-100' loading="lazy" alt="item-image" />
                                             :
                                             '_'
                                         }
@@ -130,4 +120,4 @@ function Sec2Table({ usersList , getList , baseURL }) {
     )
 }
 
-export default Sec2Table
+export default StaffTable

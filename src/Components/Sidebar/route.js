@@ -32,13 +32,31 @@ const routes = [
     name: "Section 3",
     icon: <Icons.contact size={20} />,
   },
-
   {
     path: "/section4",
     name: "Section 4",
     icon: <Icons.contact size={20} />,
   },  
-  
+  {
+    path: "/section5",
+    name: "Section 5",
+    icon: <Icons.contact size={20} />,
+  }, 
+  {
+    path: "/section6",
+    name: "Section 6",
+    icon: <Icons.contact size={20} />,
+  }, 
+  {
+    path: "/slider",
+    name: "Slider",
+    icon: <Icons.contact size={20} />,
+  }, 
+  {
+    path: "/staff",
+    name: "Staff",
+    icon: <Icons.contact size={20} />,
+  }, 
 
 ];
 

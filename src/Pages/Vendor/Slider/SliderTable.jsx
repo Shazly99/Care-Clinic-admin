@@ -6,11 +6,11 @@ import oops from '../../../assets/Images/users/Z.jfif';
 import axios from 'axios';
 
 
-function Sec2Table({ usersList , getList , baseURL }) {
+function SliderTable({ usersList , getList , baseURL }) {
 
 
     const itemRemove = async (el) => {
-        await axios.post(`${baseURL}deletesection2?ID=${el}`, {}, apiheader)
+        await axios.post(`${baseURL}deletesliders?ID=${el}`, {}, apiheader)
         .then(res => {
             getList();
         })
@@ -30,9 +30,7 @@ function Sec2Table({ usersList , getList , baseURL }) {
             <Table responsive={true} className='rounded-3 '>
                 <thead>
                     <tr className='text-center  ' style={{ background: '#F9F9F9' }}>
-                        <th>Lang</th>
-                        <th>Title</th>
-                        <th>Body</th>
+                        <th>Slide</th>
                         <th>Image</th>
                         <th>Action</th>
                     </tr>
@@ -44,27 +42,15 @@ function Sec2Table({ usersList , getList , baseURL }) {
 
                                 <td >
                                     <div>
-                                        {item.Lang === '1' && "Arabic"}
-                                        {item.Lang === '2' && "English"}
-                                        {item.Lang === '3' && "French"}
-                                        {item.Lang === '4' && "Russian"}
-                                        {item.Lang === '5' && "Turkish"}
-                                    </div>
-                                </td>
-                                <td >
-                                    <div>
-                                        {item?.Title}
-                                    </div>
-                                </td>
-                                <td >
-                                    <div>
-                                        {item?.Body}
+                                        {item.sect === '1' && "Slide 1"}
+                                        {item.sect === '2' && "Slide 2"}
+                                        {item.sect === '3' && "Slide 3"}
                                     </div>
                                 </td>
                                 <td >
                                     <div style={{ width: '200px' , height: '120px'}}>
-                                        {item?.FilePath !== null && item?.FilePath !== undefined ? 
-                                            <img src={`https://cureclinckapi.amlakturks.com/storage/app/section2/${item?.FilePath}`} className='rounded-3 w-100 h-100' loading="lazy" alt="item-image" />
+                                        {item?.FileURL !== null && item?.FileURL !== undefined ? 
+                                            <img src={`https://cureclinckapi.amlakturks.com/storage/app/sliders/${item?.FileURL}`} className='rounded-3 w-100 h-100' loading="lazy" alt="item-image" />
                                             :
                                             '_'
                                         }
@@ -130,4 +116,4 @@ function Sec2Table({ usersList , getList , baseURL }) {
     )
 }
 
-export default Sec2Table
+export default SliderTable

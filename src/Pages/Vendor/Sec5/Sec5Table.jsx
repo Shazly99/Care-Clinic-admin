@@ -6,11 +6,11 @@ import oops from '../../../assets/Images/users/Z.jfif';
 import axios from 'axios';
 
 
-function Sec2Table({ usersList , getList , baseURL }) {
+function Sec5Table({ usersList , getList , baseURL }) {
 
 
     const itemRemove = async (el) => {
-        await axios.post(`${baseURL}deletesection2?ID=${el}`, {}, apiheader)
+        await axios.post(`${baseURL}deletesection5?ID=${el}`, {}, apiheader)
         .then(res => {
             getList();
         })
@@ -63,8 +63,8 @@ function Sec2Table({ usersList , getList , baseURL }) {
                                 </td>
                                 <td >
                                     <div style={{ width: '200px' , height: '120px'}}>
-                                        {item?.FilePath !== null && item?.FilePath !== undefined ? 
-                                            <img src={`https://cureclinckapi.amlakturks.com/storage/app/section2/${item?.FilePath}`} className='rounded-3 w-100 h-100' loading="lazy" alt="item-image" />
+                                        {item?.image !== null && item?.image !== undefined ? 
+                                            <img src={`https://cureclinckapi.amlakturks.com/storage/app/section5/${item?.image}`} className='rounded-3 w-100 h-100' loading="lazy" alt="item-image" />
                                             :
                                             '_'
                                         }
@@ -130,4 +130,4 @@ function Sec2Table({ usersList , getList , baseURL }) {
     )
 }
 
-export default Sec2Table
+export default Sec5Table

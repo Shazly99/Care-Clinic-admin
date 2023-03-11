@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import Component from '../../../constants/Component'
-import './Sec2.scss'
+// import './Sec2.scss'
+import '../Sec2/Sec2.scss'
 import Icons from "../../../constants/Icons.js";
 import { apiheader } from '../../../utils/fetchData';
 import axios from 'axios';
 
 
-function Sec2({baseURL}) {
+function Sec6({baseURL}) {
 
-  let listURL = `${baseURL}getsection2`;
+  let listURL = `${baseURL}getsection6`;
   const [loading, setLoading] = useState(false);
   const [usersList, setuserList] = useState([]);
 
@@ -36,10 +37,10 @@ function Sec2({baseURL}) {
         !loading ?
           <>
             <div className="app__Users ">
-              <Component.ButtonBase title={"Add  "} bg={"primary"} icon={<Icons.add size={21} color={'#ffffffb4'} />} path="/section2/add" />
+              <Component.ButtonBase title={"Add  "} bg={"primary"} icon={<Icons.add size={21} color={'#ffffffb4'} />} path="/section6/add" />
 
               <div className="app__Users-table">
-                <Component.Sec2Table usersList={usersList} getList={getList} baseURL={baseURL} />
+                <Component.Sec6Table usersList={usersList} getList={getList} baseURL={baseURL} />
               </div>
             </div>
           </> : <Component.Loader />
@@ -48,5 +49,5 @@ function Sec2({baseURL}) {
   )
 }
 
-export default Sec2
+export default Sec6
 
