@@ -83,7 +83,7 @@ const Contactus = () => {
                                         </td>
                                         <td >
                                             <div>
-                                                <p style={{ width: '200px', whiteSpace: "pre-wrap", fontSize: '16px', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '10px', flexDirection: 'column' }}>
+                                                <p style={{ width: '360px', whiteSpace: "pre-wrap", fontSize: '16px', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '10px', flexDirection: 'column' }}>
                                                     {item.address}
                                                 </p>
                                             </div>
@@ -93,7 +93,7 @@ const Contactus = () => {
                                         <td >
                                             <div>
 
-                                            <p style={{ width: '200px',whiteSpace: "pre-wrap", fontSize: '16px', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '10px', flexDirection: 'column' }}>
+                                            <p style={{ width: '360px',whiteSpace: "pre-wrap", fontSize: '16px', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '10px', flexDirection: 'column' }}>
                                                 {item.footerHead}
 
                                             </p>
@@ -102,7 +102,7 @@ const Contactus = () => {
 
                                         <td >
                                             <div>
-                                                        <p style={{ width: '200px',whiteSpace: "pre-wrap", fontSize: '16px', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '10px', flexDirection: 'column' }}>
+                                                        <p style={{ width: '360px',whiteSpace: "pre-wrap", fontSize: '16px', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '10px', flexDirection: 'column' }}>
                                                 {item.footerText}
                                             </p>
                                             </div>
@@ -111,7 +111,7 @@ const Contactus = () => {
 
                                         <td >
                                             <div>
-                                                 <p style={{ width: '200px',whiteSpace: "pre-wrap", fontSize: '16px', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '10px', flexDirection: 'column' }}>
+                                                 <p style={{ width: '360px',whiteSpace: "pre-wrap", fontSize: '16px', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '10px', flexDirection: 'column' }}>
                                                 {item.footerBody}
                                             </p> 
                                             </div>
