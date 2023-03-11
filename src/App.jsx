@@ -75,11 +75,58 @@ function App() {
             { path: 'editUser/:id', element: <ProtectedRoutes>  <Component.Edit /> </ProtectedRoutes> },
 
           ]
-        }, 
+        },
+        {
+          path: '/brand', children: [
+            { index: true, element: <ProtectedRoutes>  <Component.Brand /> </ProtectedRoutes> },
+            { path: 'addbrand', element: <ProtectedRoutes> <Component.AddBrand /></ProtectedRoutes> },
+            { path: 'editbrand/:id', element: <ProtectedRoutes>  <Component.EditBrand /> </ProtectedRoutes> },
+
+          ]
+        },
+
+        {
+          path: '/contactus', children: [
+            { index: true, element: <ProtectedRoutes>  <Component.Contactus /> </ProtectedRoutes> },
+            { path: 'addcontactus', element: <ProtectedRoutes> <Component.AddContactus /></ProtectedRoutes> },
+            { path: 'editcontactus/:id', element: <ProtectedRoutes>  <Component.EditContactus /> </ProtectedRoutes> },
+
+          ]
+        },
+
+        {
+          path: '/section1', children: [
+            { index: true, element: <ProtectedRoutes>  <Component.Sec1 /> </ProtectedRoutes> },
+            { path: 'addsection1', element: <ProtectedRoutes> <Component.AddSec1 /></ProtectedRoutes> },
+            { path: 'editsection1/:id', element: <ProtectedRoutes>  <Component.EditSec1 /> </ProtectedRoutes> },
+
+          ]
+        },
+
+        {
+          path: '/section3', children: [
+            { index: true, element: <ProtectedRoutes>  <Component.Sec3 /> </ProtectedRoutes> },
+            { path: 'addsection3', element: <ProtectedRoutes> <Component.AddSec3 /></ProtectedRoutes> },
+            { path: 'editsection3/:id', element: <ProtectedRoutes>  <Component.EditSec3 /> </ProtectedRoutes> },
+
+          ]
+        },
+
+        {
+          path: '/section4', children: [
+            { index: true, element: <ProtectedRoutes>  <Component.Sec4 /> </ProtectedRoutes> },
+            { path: 'addsection4', element: <ProtectedRoutes> <Component.AddSec4 /></ProtectedRoutes> },
+            { path: 'editsection4/:id', element: <ProtectedRoutes>  <Component.EditSec4 /> </ProtectedRoutes> },
+
+          ]
+        },
+
+
+        // 
       ],
     },
 
- 
+
 
     {
       path: '/auth/', element: <Component.Auth />, children: [

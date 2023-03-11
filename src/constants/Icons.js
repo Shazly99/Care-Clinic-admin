@@ -32,8 +32,11 @@ import { BsChatSquareTextFill as chat } from "react-icons/bs";
 import { BsImage as imageUpload } from "react-icons/bs";
 import { RxUpdate as uploadItem } from "react-icons/rx";
 import { MdBookmarkAdded as Added } from "react-icons/md";
-
+import { TbBrandSass as brand } from "react-icons/tb";
+import { MdOutlineContactless as contact } from "react-icons/md";
 export default{
+    contact,
+    brand,
     uploadItem,
     Added,
     send,
