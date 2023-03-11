@@ -11,6 +11,13 @@ import Login from './../Pages/auth/Login/Login';
 import AddNewUser from '../Pages/Vendor/Users/AddUser/AddNewUser';
 import Edit from './../Pages/Vendor/Users/Edit/Edit'; 
 import Brand from './../Pages/Vendor/Brand/Brand';
+// rashed
+import AddSec2 from '../Pages/Vendor/Sec2/AddSec2/AddSec2';
+import EditSec2 from '../Pages/Vendor/Sec2/EditSec2/EditSec2';
+import Sec2 from '../Pages/Vendor/Sec2/Sec2';
+import Sec2Table from '../Pages/Vendor/Sec2/Sec2Table';
+import Loader from '../Components/Shared/Loader/Loader';
+
 import AddBrand from './../Pages/Vendor/Brand/AddBrand';
 import EditBrand from './../Pages/Vendor/Brand/EditBrand';
 import Contactus from './../Pages/Vendor/Contactus/Contactus';
@@ -30,7 +37,12 @@ export default {
     // Layout 
     Vendor,
     Auth, 
-
+// rashed
+AddSec2,
+EditSec2,
+Sec2,
+Sec2Table,
+Loader,
     // Vendor Components User 1 
     AddNewUser,
     Users,

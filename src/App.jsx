@@ -76,6 +76,14 @@ function App() {
 
           ]
         },
+        // rashed
+        {
+          path: '/section2', children: [
+            { index: true, element: <ProtectedRoutes>  <Component.Sec2 baseURL={baseURL} /> </ProtectedRoutes> },
+            { path: 'add', element: <ProtectedRoutes> <Component.AddSec2 baseURL={baseURL} /></ProtectedRoutes> },
+            { path: 'edit/:id', element: <ProtectedRoutes>  <Component.EditSec2 baseURL={baseURL} /> </ProtectedRoutes> },
+          ]
+        }, 
         {
           path: '/brand', children: [
             { index: true, element: <ProtectedRoutes>  <Component.Brand /> </ProtectedRoutes> },
