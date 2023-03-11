@@ -150,3 +150,49 @@ td {
 td {
     white-space: nowrap !important;
 }
+
+
+#ready {
+    text-align: center;
+    z-index: 999999;
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $colorRed-0;
+    background-color: #000000;
+  }
+
+  // button in folder (component / button ) shared in all project 
+.baseBtn {
+    padding: 15px;
+  
+    button {
+      font-family: $fontBase !important;
+      font-style: normal;
+      font-weight: 400 !important;
+      font-size: 18px !important;
+      line-height: 27px;
+      color: #FFFFFF;
+      gap: 12px;
+      padding: 12px 35px !important;
+      border: none;
+    }
+  }
+  
+  .baseBtn1 {
+    padding: 15px;
+  
+    button {
+      font-family: $fontBase !important;
+      font-style: normal;
+      font-weight: 400 !important;
+      font-size: 18px !important;
+      line-height: 27px;
+      color: #FFFFFF;
+      gap: 12px;
+      padding: 12px 35px !important;
+      border: none;
+    }
+  }

@@ -5,17 +5,12 @@ const routes = [
     path: "/",
     name: "Dashboard",
     icon: <Icons.Dashboard size={20} />,
-  }, 
-  {
-    path: "/user",
-    name: "Users",
-    icon: <Icons.user size={20} />,
-  },
+  },  
   {
     path: "/brand",
     name: "Brands",
     icon: <Icons.brand size={20} />,
-  },  
+  }, 
   
   {
     path: "/contactus",
@@ -27,7 +22,11 @@ const routes = [
     name: "Section 1",
     icon: <Icons.contact size={20} />,
   },
-
+  {
+    path: "/section2",
+    name: "Section 2",
+    icon: <Icons.user size={20} />,
+  },  
   {
     path: "/section3",
     name: "Section 3",

@@ -65,58 +65,14 @@ function Navber() {
           <Navbar.Toggle />
 
           <Navbar.Collapse className="navEnd justify-content-end">
-
-            <Nav className="chat__icon">
-              <NavDropdown title={<Icons.chat size={21} />} id="basic-nav-dropdown"  >
-                <div style={{ maxHeight: '60vh', overflowY: 'auto' }}>
-                  <LinkContainer to="/chat/clients">
-                    <NavDropdown.Item  >
-                      <div style={{ display: 'flex', alignItems: 'center' }}>
-                        <Icons.Chatuser color='#313bac' style={{ marginRight: 10 }} />
-                        <span>Chat clients </span>
-                      </div>
-                    </NavDropdown.Item>
-                  </LinkContainer>
-
-                  <LinkContainer to="/chat/doctors">
-                    <NavDropdown.Item  >
-                      <div style={{ display: 'flex', alignItems: 'center' }}>
-                        <Icons.ChatDoc color='#313bac' style={{ marginRight: 10 }} />
-
-                        <span>Chat doctors</span>
-                      </div>
-                    </NavDropdown.Item>
-                  </LinkContainer>
-
-                </div>
-              </NavDropdown>
-              <span className='bullet bullet-dot bg-success h-6px w-6px position-absolute translate-middle top-0 start-50 animation-blink'></span>
-
-            </Nav>
+ 
 
             <Nav>
               <NavDropdown title={<img src={Img.avatar1} width="40" height="40" style={{ borderRadius: '10px' }} />} id="basic-nav-dropdown"  >
                 <div style={{ maxHeight: '60vh', overflowY: 'auto' }}>
+ 
 
-                  <LinkContainer to="/venderProfile">
-                    <NavDropdown.Item  >
-                      <div style={{ display: 'flex', alignItems: 'center' }}>
-                        <img src={Icons.profile} alt="" srcset="" style={{ marginRight: 10 }} width={18} height={18} />
-                        {/* <Icons.profile size={20} /> */}
-                        <span>My Profile</span>
-                      </div>
-                    </NavDropdown.Item>
-                  </LinkContainer>
-
-
-                  <NavDropdown.Item>
-                    <div style={{ display: 'flex', alignItems: 'center' }}>
-                      <Icons.settings size={18} style={{ marginRight: 10 }} />
-                      <span>Settings & Privacy</span>
-                    </div>
-                  </NavDropdown.Item>
-
-                  <NavDropdown.Divider />
+                  {/* <NavDropdown.Divider /> */}
 
                   <LinkContainer onClick={LogOut} to={'/auth/login'}>
                     <NavDropdown.Item  >
