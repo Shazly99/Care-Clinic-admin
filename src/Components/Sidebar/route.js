@@ -25,7 +25,7 @@ const routes = [
   {
     path: "/section2",
     name: "Section 2",
-    icon: <Icons.user size={20} />,
+    icon: <Icons.contact size={20} />,
   },  
   {
     path: "/section3",
