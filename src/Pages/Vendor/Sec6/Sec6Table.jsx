@@ -6,11 +6,11 @@ import oops from '../../../assets/Images/users/Z.jfif';
 import axios from 'axios';
 
 
-function Sec2Table({ usersList , getList , baseURL }) {
+function Sec6Table({ usersList , getList , baseURL }) {
 
 
     const itemRemove = async (el) => {
-        await axios.post(`${baseURL}deletesection2?ID=${el}`, {}, apiheader)
+        await axios.post(`${baseURL}deletesection6?ID=${el}`, {}, apiheader)
         .then(res => {
             getList();
         })
@@ -31,9 +31,14 @@ function Sec2Table({ usersList , getList , baseURL }) {
                 <thead>
                     <tr className='text-center  ' style={{ background: '#F9F9F9' }}>
                         <th>Lang</th>
-                        <th>Title</th>
-                        <th>Body</th>
-                        <th>Image</th>
+                        <th>1th Lable</th>
+                        <th>1th Value</th>
+                        <th>2th Lable</th>
+                        <th>2th Value</th>
+                        <th>3th Lable</th>
+                        <th>3th Value</th>
+                        <th>4th Lable</th>
+                        <th>4th Value</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -53,21 +58,42 @@ function Sec2Table({ usersList , getList , baseURL }) {
                                 </td>
                                 <td >
                                     <div>
-                                        {item?.Title}
+                                        {item?.SatisfactionKey}
                                     </div>
                                 </td>
                                 <td >
                                     <div>
-                                        {item?.Body}
+                                        {item?.SatisfactionValue}
                                     </div>
                                 </td>
                                 <td >
-                                    <div style={{ width: '200px' , height: '120px'}}>
-                                        {item?.FilePath !== null && item?.FilePath !== undefined ? 
-                                            <img src={`https://cureclinckapi.amlakturks.com/storage/app/section2/${item?.FilePath}`} className='rounded-3 w-100 h-100' loading="lazy" alt="item-image" />
-                                            :
-                                            '_'
-                                        }
+                                    <div>
+                                        {item?.YearsExpkey}
+                                    </div>
+                                </td>
+                                <td >
+                                    <div>
+                                        {item?.YearsExpValue}
+                                    </div>
+                                </td>
+                                <td >
+                                    <div>
+                                        {item?.StaffCountKey}
+                                    </div>
+                                </td>
+                                <td >
+                                    <div>
+                                        {item?.StaffCountValue}
+                                    </div>
+                                </td>
+                                <td >
+                                    <div>
+                                        {item?.DcKey}
+                                    </div>
+                                </td>
+                                <td >
+                                    <div>
+                                        {item?.Dcvalue}
                                     </div>
                                 </td>
                                 <td>
@@ -130,4 +156,4 @@ function Sec2Table({ usersList , getList , baseURL }) {
     )
 }
 
-export default Sec2Table
+export default Sec6Table

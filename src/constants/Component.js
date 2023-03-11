@@ -19,6 +19,26 @@ import Sec2 from '../Pages/Vendor/Sec2/Sec2';
 import Sec2Table from '../Pages/Vendor/Sec2/Sec2Table';
 import Loader from '../Components/Shared/Loader/Loader';
 
+import AddSec5 from '../Pages/Vendor/Sec5/AddSec5/AddSec5';
+import EditSec5 from '../Pages/Vendor/Sec5/EditSec5/EditSec5';
+import Sec5 from '../Pages/Vendor/Sec5/Sec5';
+import Sec5Table from '../Pages/Vendor/Sec5/Sec5Table';
+
+import AddSec6 from '../Pages/Vendor/Sec6/AddSec6/AddSec6';
+import EditSec6 from '../Pages/Vendor/Sec6/EditSec6/EditSec6';
+import Sec6 from '../Pages/Vendor/Sec6/Sec6';
+import Sec6Table from '../Pages/Vendor/Sec6/Sec6Table';
+
+import AddSlider from '../Pages/Vendor/Slider/AddSlider/AddSlider';
+import EditSlider from '../Pages/Vendor/Slider/EditSlider/EditSlider';
+import Slider from '../Pages/Vendor/Slider/Slider';
+import SliderTable from '../Pages/Vendor/Slider/SliderTable';
+
+import AddStaff from '../Pages/Vendor/Staff/AddStaff/AddStaff';
+import EditStaff from '../Pages/Vendor/Staff/EditStaff/EditStaff';
+import Staff from '../Pages/Vendor/Staff/Staff';
+import StaffTable from '../Pages/Vendor/Staff/StaffTable';
+
 import AddBrand from './../Pages/Vendor/Brand/AddBrand';
 import EditBrand from './../Pages/Vendor/Brand/EditBrand';
 import Contactus from './../Pages/Vendor/Contactus/Contactus';
@@ -38,12 +58,32 @@ export default {
     // Layout 
     Vendor,
     Auth, 
-// rashed
-AddSec2,
-EditSec2,
-Sec2,
-Sec2Table,
-Loader,
+    // rashed Sec2
+    AddSec2,
+    EditSec2,
+    Sec2,
+    Sec2Table,
+    Loader,
+    // rashed Sec5
+    AddSec5,
+    EditSec5,
+    Sec5,
+    Sec5Table,
+    // rashed Sec6
+    AddSec6,
+    EditSec6,
+    Sec6,
+    Sec6Table,
+    // rashed Slider
+    AddSlider,
+    EditSlider,
+    Slider,
+    SliderTable,
+    // rashed Staff
+    AddStaff,
+    EditStaff,
+    Staff,
+    StaffTable,
     // Vendor Components User 1 
     AddNewUser,
     Users,

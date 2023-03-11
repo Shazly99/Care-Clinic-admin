@@ -3,9 +3,6 @@ import Component from './constants/Component';
 import './style/App.scss';
 import VenderContext from './context/Store';
 import { Toaster } from 'react-hot-toast';
-import axios from 'axios';
-import { useEffect, useState } from 'react';
-import { apiheader } from './utils/fetchData';
 import ChatStore from './context/ChatStore';
 
 function App() {
@@ -33,14 +30,6 @@ function App() {
 
           ]
         },
-        // rashed
-        {
-          path: '/section2', children: [
-            { index: true, element: <ProtectedRoutes>  <Component.Sec2 baseURL={baseURL} /> </ProtectedRoutes> },
-            { path: 'add', element: <ProtectedRoutes> <Component.AddSec2 baseURL={baseURL} /></ProtectedRoutes> },
-            { path: 'edit/:id', element: <ProtectedRoutes>  <Component.EditSec2 baseURL={baseURL} /> </ProtectedRoutes> },
-          ]
-        }, 
         {
           path: '/brand', children: [
             { index: true, element: <ProtectedRoutes>  <Component.Brand /> </ProtectedRoutes> },
@@ -86,8 +75,46 @@ function App() {
           ]
         },
 
+        // rashed
+        {
+          path: '/section2', children: [
+            { index: true, element: <ProtectedRoutes>  <Component.Sec2 baseURL={baseURL} /> </ProtectedRoutes> },
+            { path: 'add', element: <ProtectedRoutes> <Component.AddSec2 baseURL={baseURL} /></ProtectedRoutes> },
+            { path: 'edit/:id', element: <ProtectedRoutes>  <Component.EditSec2 baseURL={baseURL} /> </ProtectedRoutes> },
+          ]
+        }, 
 
-        // 
+        {
+          path: '/section5', children: [
+            { index: true, element: <ProtectedRoutes>  <Component.Sec5 baseURL={baseURL} /> </ProtectedRoutes> },
+            { path: 'add', element: <ProtectedRoutes> <Component.AddSec5 baseURL={baseURL} /></ProtectedRoutes> },
+            { path: 'edit/:id', element: <ProtectedRoutes>  <Component.EditSec5 baseURL={baseURL} /> </ProtectedRoutes> },
+          ]
+        }, 
+
+        {
+          path: '/section6', children: [
+            { index: true, element: <ProtectedRoutes>  <Component.Sec6 baseURL={baseURL} /> </ProtectedRoutes> },
+            { path: 'add', element: <ProtectedRoutes> <Component.AddSec6 baseURL={baseURL} /></ProtectedRoutes> },
+            { path: 'edit/:id', element: <ProtectedRoutes>  <Component.EditSec6 baseURL={baseURL} /> </ProtectedRoutes> },
+          ]
+        }, 
+
+        {
+          path: '/slider', children: [
+            { index: true, element: <ProtectedRoutes>  <Component.Slider baseURL={baseURL} /> </ProtectedRoutes> },
+            { path: 'add', element: <ProtectedRoutes> <Component.AddSlider baseURL={baseURL} /></ProtectedRoutes> },
+            { path: 'edit/:id', element: <ProtectedRoutes>  <Component.EditSlider baseURL={baseURL} /> </ProtectedRoutes> },
+          ]
+        }, 
+
+        {
+          path: '/staff', children: [
+            { index: true, element: <ProtectedRoutes>  <Component.Staff baseURL={baseURL} /> </ProtectedRoutes> },
+            { path: 'add', element: <ProtectedRoutes> <Component.AddStaff baseURL={baseURL} /></ProtectedRoutes> },
+            { path: 'edit/:id', element: <ProtectedRoutes>  <Component.EditStaff baseURL={baseURL} /> </ProtectedRoutes> },
+          ]
+        }, 
       ],
     },
 
