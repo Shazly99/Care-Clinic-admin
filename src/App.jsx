@@ -9,52 +9,9 @@ import { apiheader } from './utils/fetchData';
 import ChatStore from './context/ChatStore';
 
 function App() {
-  const URL_Doctors = `https://bytrh.com/api/admin/doctors`;
-  let token = localStorage.getItem('token')
-  const [pagesCountDoctors, setPagesCountDoctors] = useState(0);
-  const [countDoctors, setCountDoctors] = useState(1);
-  const [searchKeyDoctors, setSearchKeyDoctors] = useState(null);
-  const [loadingDoctors, setLoadingDoctors] = useState(false)
-  const [fetchDoctors, setFetchDoctors] = useState([])
 
-  async function getTokenDoctors() {
 
-    setLoadingDoctors(true);
-    await axios.post(URL_Doctors, {
-      IDPage: countDoctors,
-      SearchKey: searchKeyDoctors
-    }, apiheader)
-      .then(res => {
-        setFetchDoctors(res.data.Response.Doctors);
-        setPagesCountDoctors(res.data.Response.Pages);
-        setLoadingDoctors(false);
-      })
-      .catch((error) => {
-        console.log(error)
-      });
-  }
-  useEffect(() => {
-    if (token) {
-      getTokenDoctors();
-    }
-  }, [token, countDoctors, pagesCountDoctors, searchKeyDoctors]);
-
-  // get countries Bytra
-  const [fetchCountriesBytra, setFetchCountriesBytra] = useState([]);
-  async function getCountriesBytra() {
-    await axios.get(`https://bytrh.com/api/doctor/countries`)
-      .then(res => {
-        if (res.status === 200 && res.request.readyState === 4) {
-          setFetchCountriesBytra(res.data.Response.Countries);
-        }
-      })
-      .catch(err => {
-        console.log(err);
-      })
-  }
-  useEffect(() => {
-    getCountriesBytra();
-  }, [])
+  const baseURL = 'https://cureclinckapi.amlakturks.com/public/api/';
 
 
   function ProtectedRoutes({ children }) {
