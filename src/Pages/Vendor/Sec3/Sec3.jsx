@@ -4,6 +4,7 @@ import { Button, Modal, Dropdown, DropdownButton, Table } from "react-bootstrap"
 import { Link } from 'react-router-dom';
 import Component from '../../../constants/Component';
 import Icons from '../../../constants/Icons';
+import oops from '../../../assets/Images/users/Z.jfif';
 
 
 const Sec3 = () => {
@@ -34,118 +35,128 @@ const Sec3 = () => {
         contactusGet()
     }, [])
     return (
-        <div className="app__Users ">
-            <Component.ButtonBase title={"Add  "} bg={"primary"} icon={<Icons.add size={21} color={'#ffffffb4'} />} path="/section3/addsection3" />
-            <div className="app__Users-table">
-                <Table responsive={true} className='rounded-3 '>
-                    <thead>
-                        <tr className='text-center  ' style={{ background: '#F9F9F9' }}>
-                            <th>Lang</th>
-                            <th>PTitle </th>
-                            <th> Pbody</th>
-                            <th>LTitle </th>
-                            <th>LBody </th>
-                            <th> BATitle</th>
-                            <th> BABody</th>
-                            <th> Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody className='text-center'>
-                        {
-                            contactus?.map((item, index) => (
-                                <tr key={index}>
-                                    <td >
-                                        <div >
-                                            {item.Lang === '1' && "Arabic"}
-                                            {item.Lang === '2' && "English"}
-                                        </div>
-                                    </td>
-                                    <td >
-                                        <div >
-                                            {item.PTitle}
-                                        </div>
-                                    </td>
-                                    <td >
-                                        <div >
-                                            {item.Pbody}
-                                        </div>
-                                    </td>
-                                    <td >
-                                        <div >
-                                            {item.LTitle}
-                                        </div>
-                                    </td>
-                                    <td >
-                                        <div>
-                                            {item.LBody}
-                                        </div>
 
-                                    </td>
+        <>
 
-                                    <td >
-                                        <div>
-                                            {item.BATitle}
-                                        </div>
-                                    </td>
-                                    <td >
-                                        <div>
-                                            {item.BABody}
-                                        </div>
-                                    </td>
+{
+            contactus?
+            <div className="app__Users ">
+                <Component.ButtonBase title={"Add  "} bg={"primary"} icon={<Icons.add size={21} color={'#ffffffb4'} />} path="/section3/addsection3" />
+                <div className="app__Users-table">
+                    <Table responsive={true} className='rounded-3 '>
+                        <thead>
+                            <tr className='text-center  ' style={{ background: '#F9F9F9' }}>
+                                <th>Lang</th>
+                                <th>PTitle </th>
+                                <th> Pbody</th>
+                                <th>LTitle </th>
+                                <th>LBody </th>
+                                <th> BATitle</th>
+                                <th> BABody</th>
+                                <th> Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody className='text-center'>
+                            {
+                                contactus?.map((item, index) => (
+                                    <tr key={index}>
+                                        <td >
+                                            <div >
+                                                {item.Lang === '1' && "Arabic"}
+                                                {item.Lang === '2' && "English"}
+                                            </div>
+                                        </td>
+                                        <td >
+                                            <div >
+                                                {item.PTitle}
+                                            </div>
+                                        </td>
+                                        <td >
+                                            <div >
+                                                {item.Pbody}
+                                            </div>
+                                        </td>
+                                        <td >
+                                            <div >
+                                                {item.LTitle}
+                                            </div>
+                                        </td>
+                                        <td >
+                                            <div>
+                                                {item.LBody}
+                                            </div>
+    
+                                        </td>
+    
+                                        <td >
+                                            <div>
+                                                {item.BATitle}
+                                            </div>
+                                        </td>
+                                        <td >
+                                            <div>
+                                                {item.BABody}
+                                            </div>
+                                        </td>
+    
+    
+    
+    
+    
+                                        <td>
+                                            <div>
+    
+                                                <span>
+                                                    <DropdownButton
+                                                        id={`dropdown-${item.IDBrandSubCategory}`}
+                                                        title="Actions"
+                                                        variant="outline-success"
+                                                        onSelect={(eventKey) => handleActionSelect(item.IDBrandSubCategory, eventKey)}
+                                                        className="DropdownButton "
+                                                        drop={'down-centered'}
+                                                    >
+                                                        <Dropdown.Item eventKey="Edite" as={Link} to={`/contactus/editcontactus/${item.ID}`}>
+                                                            Edit
+                                                        </Dropdown.Item>
+    
+                                                        <Dropdown.Item eventKey="DELETED">Deleted</Dropdown.Item>
+                                                        <Modal show={showDeleteModal} onHide={() => setShowDeleteModal(false)} centered>
+                                                                    <Modal.Header closeButton>
+                                                                        <Modal.Title className='text-center w-100 text-warning'>
+                                                                            <h5 className='mb-0'>Warning Remove..</h5>
+                                                                        </Modal.Title>
+                                                                    </Modal.Header>
+                                                                    <Modal.Body>
+                                                                        <img src={oops} className='w-50 d-block mx-auto' alt="oops" loading="lazy" />
 
-
-
-
-
-                                    <td>
-                                        <div>
-
-                                            <span>
-                                                <DropdownButton
-                                                    id={`dropdown-${item.IDBrandSubCategory}`}
-                                                    title="Actions"
-                                                    variant="outline-success"
-                                                    onSelect={(eventKey) => handleActionSelect(item.IDBrandSubCategory, eventKey)}
-                                                    className="DropdownButton "
-                                                    drop={'down-centered'}
-                                                >
-                                                    <Dropdown.Item eventKey="Edite" as={Link} to={`/contactus/editcontactus/${item.ID}`}>
-                                                        Edit
-                                                    </Dropdown.Item>
-
-                                                    <Dropdown.Item eventKey="DELETED">Deleted</Dropdown.Item>
-                                                    <Modal show={showDeleteModal} onHide={() => setShowDeleteModal(false)} centered>
-                                                        <Modal.Header closeButton>
-                                                            <Modal.Title>Delete Client</Modal.Title>
-                                                        </Modal.Header>
-                                                        <Modal.Body>
-                                                            Are you sure you want to delete this client?
-                                                        </Modal.Body>
-                                                        <Modal.Footer className='  d-flex justify-content-center'>
-                                                            <Button variant="outline-primary" onClick={() => setShowDeleteModal(false)}>
-                                                                Cancel
-                                                            </Button>
-                                                            <Button variant="danger" onClick={() => handleDeleteUser(item.ID)}>
-                                                                Delete Now
-                                                            </Button>
-                                                        </Modal.Footer>
-                                                    </Modal>
-
-
-                                                </DropdownButton>
-                                            </span>
-                                        </div>
-                                    </td>
-                                </tr>
-                            ))
-                        }
-
-                    </tbody>
-
-                </Table>
+                                                                    </Modal.Body>
+                                                                    <Modal.Footer className='  d-flex justify-content-center'>
+                                                                        <Button variant="primary" onClick={() => handleDeleteUser(item.ID)}>
+                                                                            Confirm
+                                                                        </Button>
+                                                                        <Button variant="primary" onClick={() => setShowDeleteModal(false)}>
+                                                                            Cancel
+                                                                        </Button>
+                                                                    </Modal.Footer>
+                                                                </Modal>
+    
+                                                    </DropdownButton>
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                ))
+                            }
+    
+                        </tbody>
+    
+                    </Table>
+                </div>
+    
             </div>
-
-        </div>
+            : <Component.Loader />
+        }
+        </>
 
     )
 }

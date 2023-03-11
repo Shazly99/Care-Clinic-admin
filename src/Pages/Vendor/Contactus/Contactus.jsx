@@ -4,6 +4,7 @@ import { Button, Modal, Dropdown, DropdownButton, Table } from "react-bootstrap"
 import { Link } from 'react-router-dom';
 import Component from '../../../constants/Component';
 import Icons from '../../../constants/Icons';
+import oops from '../../../assets/Images/users/Z.jfif';
 
 
 const Contactus = () => {
@@ -35,6 +36,9 @@ const Contactus = () => {
     }, [])
     return (
         <>
+        {
+            contactus?
+
             <div className="app__Users ">
                 <Component.ButtonBase title={"Add  "} bg={"primary"} icon={<Icons.add size={21} color={'#ffffffb4'} />} path="/contactus/addcontactus" />
                 <div className="app__Users-table">
@@ -162,21 +166,24 @@ const Contactus = () => {
 
                                                         <Dropdown.Item eventKey="DELETED">Deleted</Dropdown.Item>
                                                         <Modal show={showDeleteModal} onHide={() => setShowDeleteModal(false)} centered>
-                                                            <Modal.Header closeButton>
-                                                                <Modal.Title>Delete Client</Modal.Title>
-                                                            </Modal.Header>
-                                                            <Modal.Body>
-                                                                Are you sure you want to delete this client?
-                                                            </Modal.Body>
-                                                            <Modal.Footer className='  d-flex justify-content-center'>
-                                                                <Button variant="outline-primary" onClick={() => setShowDeleteModal(false)}>
-                                                                    Cancel
-                                                                </Button>
-                                                                <Button variant="danger" onClick={() => handleDeleteUser(item.ID)}>
-                                                                    Delete Now
-                                                                </Button>
-                                                            </Modal.Footer>
-                                                        </Modal>
+                                                                    <Modal.Header closeButton>
+                                                                        <Modal.Title className='text-center w-100 text-warning'>
+                                                                            <h5 className='mb-0'>Warning Remove..</h5>
+                                                                        </Modal.Title>
+                                                                    </Modal.Header>
+                                                                    <Modal.Body>
+                                                                        <img src={oops} className='w-50 d-block mx-auto' alt="oops" loading="lazy" />
+
+                                                                    </Modal.Body>
+                                                                    <Modal.Footer className='  d-flex justify-content-center'>
+                                                                        <Button variant="primary" onClick={() => handleDeleteUser(item.ID)}>
+                                                                            Confirm
+                                                                        </Button>
+                                                                        <Button variant="primary" onClick={() => setShowDeleteModal(false)}>
+                                                                            Cancel
+                                                                        </Button>
+                                                                    </Modal.Footer>
+                                                                </Modal>
 
 
                                                     </DropdownButton>
@@ -193,6 +200,8 @@ const Contactus = () => {
                 </div>
 
             </div>
+            : <Component.Loader />
+        }
         </>
     )
 }
