@@ -90,7 +90,7 @@ const Login = () => {
                                         !anthorWay ?
                                             <form onSubmit={formikPhoneNumber.handleSubmit}>
                                                 <div className="email ">
-                                                    <label htmlFor="UserName" >Phone Number</label>
+                                                    <label htmlFor="UserName" className='text-dark' >Phone Number</label>
                                                     <input
                                                         id="UserName"
                                                         name="UserName"
@@ -101,7 +101,7 @@ const Login = () => {
                                                     {formikPhoneNumber.errors.UserName ? <span className='error__handel' >{formikPhoneNumber.errors.UserName}</span> : null}
                                                 </div>
                                                 <div className="email ">
-                                                    <label htmlFor="Password">Password</label>
+                                                    <label htmlFor="Password" className='text-dark'>Password</label>
                                                     <input
                                                         id="Password"
                                                         name="Password"
@@ -147,7 +147,7 @@ const Login = () => {
                             </div>
                         </Col> 
                         <Col xl={6} lg={6} xd={6} sm={12} className='avatar'>
-                            <img src={Img.avatar} />
+                            <img src={Img.avatar}  className='w-100'    />
                         </Col>
                     </Row>
                 </Container>
