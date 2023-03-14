@@ -54,7 +54,7 @@ const AddSec1 = () => {
     <>
             <Container fluid>
             <div className="app__addprodects">
-                <Component.SubNav sub__nav={[{ name: " Section 1 ", path: '/section1' }, { name: "Add section 1  ", path: '/section1/addsection1' }]} />
+                <Component.SubNav sub__nav={[{ name: " Section 1 ", path: '/section1' }, { name: "Add Item ", path: '/section1/addsection1' }]} />
 
                 <div className="app__addprodects__header ">
                     <Component.BaseHeader h1={'Add New Ads'} />
@@ -79,7 +79,7 @@ const AddSec1 = () => {
                                         </Form.Group>
 
                                         <Form.Group controlId="formBasicEndDate" className='mt-3'>
-                                            <Form.Label>SmallOne :</Form.Label>
+                                            <Form.Label>SmallOne</Form.Label>
                                             <InputGroup>
                                                 <FormControl type="text" ref={SmallOneRef} />
                                             </InputGroup>
@@ -87,7 +87,7 @@ const AddSec1 = () => {
 
 
                                         <Form.Group controlId="formBasicEndDate" className='mt-3'>
-                                            <Form.Label>BigOne :</Form.Label>
+                                            <Form.Label>BigOne</Form.Label>
                                             <InputGroup>
                                                 <FormControl type="text" ref={BigOneRef} />
                                             </InputGroup>
@@ -105,20 +105,20 @@ const AddSec1 = () => {
 
                                     <Col xl={6} lg={6} md={6} sm={12} className="app__addprodects-form-en">
                                     <Form.Group controlId="formBasicEndDate" className='mt-3'>
-                                            <Form.Label>ColorOne :</Form.Label>
+                                            <Form.Label>ColorOne</Form.Label>
                                             <InputGroup>
                                                 <FormControl type="text" ref={ColorOneRef} />
                                             </InputGroup>
                                         </Form.Group>
 
                                         <Form.Group controlId="formBasicEndDate" className='mt-3'>
-                                            <Form.Label>SmallFirst :</Form.Label>
+                                            <Form.Label>SmallFirst</Form.Label>
                                             <InputGroup>
                                                 <FormControl type="text" ref={SmallFirstRef} />
                                             </InputGroup>
                                         </Form.Group>
                                     <Form.Group controlId="formBasicEndDate" className='mt-3'>
-                                            <Form.Label>SmallSec :</Form.Label>
+                                            <Form.Label>SmallSec</Form.Label>
                                             <InputGroup>
                                                 <FormControl type="text" ref={SmallSecRef} />
                                             </InputGroup>

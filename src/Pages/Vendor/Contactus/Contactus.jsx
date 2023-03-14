@@ -14,7 +14,6 @@ const Contactus = () => {
     const contactusGet = async () => {
         let { data } = await axios.get(`https://cureclinckapi.amlakturks.com/public/api/getcontactus`);
         setContactus(data.data);
-        console.log(data.data);
     }
 
     const handleActionSelect = async (id, action) => {
@@ -68,6 +67,9 @@ const Contactus = () => {
                                             <div >
                                                 {item.Lang === '1' && "Arabic"}
                                                 {item.Lang === '2' && "English"}
+                                                {item.Lang === '3' && "French"}
+                                                {item.Lang === '4' && "Russian"}
+                                                {item.Lang === '5' && "Turkish"}
                                             </div>
                                         </td>
                                         <td >

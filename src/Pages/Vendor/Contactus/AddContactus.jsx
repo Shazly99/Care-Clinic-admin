@@ -90,22 +90,22 @@ const AddContactus = () => {
                                         </Form.Group>
 
                                         <Form.Group controlId="formBasicEndDate" className='mt-3'>
-                                            <Form.Label>Longit :</Form.Label>
+                                            <Form.Label>Longit</Form.Label>
                                             <InputGroup>
-                                                <FormControl type="text" ref={LongitRef} />
+                                                <FormControl type="number" ref={LongitRef} />
                                             </InputGroup>
                                         </Form.Group>
 
 
                                         <Form.Group controlId="formBasicEndDate" className='mt-3'>
-                                            <Form.Label>Lat :</Form.Label>
+                                            <Form.Label>Lat</Form.Label>
                                             <InputGroup>
-                                                <FormControl type="text" ref={LatRef} />
+                                                <FormControl type="number" ref={LatRef} />
                                             </InputGroup>
                                         </Form.Group>
 
                                         <Form.Group controlId="formBasicEndDate" className='mt-3'>
-                                            <Form.Label>City country:</Form.Label>
+                                            <Form.Label>City country</Form.Label>
                                             <InputGroup>
                                                 <FormControl type="text" ref={CitycountryRef} />
                                             </InputGroup>
@@ -113,14 +113,14 @@ const AddContactus = () => {
 
 
                                         <Form.Group controlId="formBasicEndDate" className='mt-3'>
-                                            <Form.Label>address :</Form.Label>
+                                            <Form.Label>address</Form.Label>
                                             <InputGroup>
                                                 <FormControl type="text" ref={addressRef} />
                                             </InputGroup>
                                         </Form.Group>
 
                                         <Form.Group controlId="formBasicEndDate" className='mt-3'>
-                                            <Form.Label>footerHead :</Form.Label>
+                                            <Form.Label>footerHead</Form.Label>
                                             <InputGroup>
                                                 <FormControl type="text" ref={footerHeadRef} />
                                             </InputGroup>
@@ -134,14 +134,14 @@ const AddContactus = () => {
                                     <Col xl={6} lg={6} md={6} sm={12} className="app__addprodects-form-en">
 
                                     <Form.Group controlId="formBasicEndDate" className='mt-3'>
-                                            <Form.Label>footerBody :</Form.Label>
+                                            <Form.Label>footerBody</Form.Label>
                                             <InputGroup>
                                                 <FormControl type="text" ref={footerBodyRef} />
                                             </InputGroup>
                                         </Form.Group>
 
                                         <Form.Group controlId="formBasicEndDate" className='mt-3'>
-                                            <Form.Label>footerText :</Form.Label>
+                                            <Form.Label>footerText</Form.Label>
                                             <InputGroup>
                                                 <FormControl type="text" ref={footerTextRef} />
                                             </InputGroup>
@@ -149,31 +149,31 @@ const AddContactus = () => {
 
 
                                         <Form.Group controlId="formBasicEndDate" className='mt-3'>
-                                            <Form.Label>Email :</Form.Label>
+                                            <Form.Label>Email</Form.Label>
                                             <InputGroup>
-                                                <FormControl type="text" ref={EmailRef} />
+                                                <FormControl type="email" ref={EmailRef} />
                                             </InputGroup>
                                         </Form.Group>
 
                                         <Form.Group controlId="formBasicEndDate" className='mt-3'>
-                                            <Form.Label>Phone :</Form.Label>
+                                            <Form.Label>Phone</Form.Label>
                                             <InputGroup>
-                                                <FormControl type="text" ref={PhoneRef} />
+                                                <FormControl type="tel" ref={PhoneRef} />
                                             </InputGroup>
                                         </Form.Group>
 
                                         <Form.Group controlId="formBasicEndDate" className='mt-3'>
-                                            <Form.Label>whatsapp :</Form.Label>
+                                            <Form.Label>whatsapp</Form.Label>
                                             <InputGroup>
-                                                <FormControl type="text" ref={whatsappRef} />
+                                                <FormControl type="tel" ref={whatsappRef} />
                                             </InputGroup>
                                         </Form.Group>
 
 
                                         <Form.Group controlId="formBasicEndDate" className='mt-3'>
-                                            <Form.Label>Messenger :</Form.Label>
+                                            <Form.Label>Messenger</Form.Label>
                                             <InputGroup>
-                                                <FormControl type="text" ref={MessengerRef} />
+                                                <FormControl type="url" ref={MessengerRef} />
                                             </InputGroup>
                                         </Form.Group>
 

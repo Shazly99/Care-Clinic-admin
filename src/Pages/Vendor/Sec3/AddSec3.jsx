@@ -56,7 +56,7 @@ const AddSec3 = () => {
     <>
             <Container fluid>
             <div className="app__addprodects">
-                <Component.SubNav sub__nav={[{ name: " Section 3 ", path: '/section3' }, { name: "Add section 3  ", path: '/section3/addsection3' }]} />
+                <Component.SubNav sub__nav={[{ name: " Section 3 ", path: '/section3' }, { name: "Add Item", path: '/section3/addsection3' }]} />
 
                 <div className="app__addprodects__header ">
                     <Component.BaseHeader h1={'Add New Ads'} />
@@ -81,7 +81,7 @@ const AddSec3 = () => {
                                         </Form.Group>
 
                                         <Form.Group controlId="formBasicEndDate" className='mt-3'>
-                                            <Form.Label>PTitle :</Form.Label>
+                                            <Form.Label>PTitle</Form.Label>
                                             <InputGroup>
                                                 <FormControl type="text" ref={PTitleRef} />
                                             </InputGroup>
@@ -89,14 +89,14 @@ const AddSec3 = () => {
 
 
                                         <Form.Group controlId="formBasicEndDate" className='mt-3'>
-                                            <Form.Label>Pbody :</Form.Label>
+                                            <Form.Label>Pbody</Form.Label>
                                             <InputGroup>
                                                 <FormControl type="text" ref={PbodyRef} />
                                             </InputGroup>
                                         </Form.Group>
 
                                         <Form.Group controlId="formBasicEndDate" className='mt-3'>
-                                            <Form.Label>BABody :</Form.Label>
+                                            <Form.Label>BABody</Form.Label>
                                             <InputGroup>
                                                 <FormControl type="text" ref={BABodyRef} />
                                             </InputGroup>
@@ -114,20 +114,20 @@ const AddSec3 = () => {
 
                                     <Col xl={6} lg={6} md={6} sm={12} className="app__addprodects-form-en">
                                     <Form.Group controlId="formBasicEndDate" className='mt-3'>
-                                            <Form.Label>LTitle :</Form.Label>
+                                            <Form.Label>LTitle</Form.Label>
                                             <InputGroup>
                                                 <FormControl type="text" ref={LTitleRef} />
                                             </InputGroup>
                                         </Form.Group>
 
                                         <Form.Group controlId="formBasicEndDate" className='mt-3'>
-                                            <Form.Label>LBody :</Form.Label>
+                                            <Form.Label>LBody</Form.Label>
                                             <InputGroup>
                                                 <FormControl type="text" ref={LBodyRef} />
                                             </InputGroup>
                                         </Form.Group>
                                     <Form.Group controlId="formBasicEndDate" className='mt-3'>
-                                            <Form.Label>BATitle :</Form.Label>
+                                            <Form.Label>BATitle</Form.Label>
                                             <InputGroup>
                                                 <FormControl type="text" ref={BATitleRef} />
                                             </InputGroup>
