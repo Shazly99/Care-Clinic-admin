@@ -16,14 +16,9 @@ const AddSec6 = ({ baseURL }) => {
     let navigate = useNavigate();
 
     const lang = useRef();
-    const firstKey = useRef();
-    const firstValue = useRef();
-    const secondKey = useRef();
-    const secondValue = useRef();
-    const thirdKey = useRef();
-    const thirdValue = useRef();
-    const fourthKey = useRef();
-    const fourthValue = useRef();
+    const title = useRef();
+    const body = useRef();
+    const image = useRef();
 
     let add_URL = `${baseURL}Addsection6`;
 
@@ -32,14 +27,9 @@ const AddSec6 = ({ baseURL }) => {
 
         addHandeler({
             Lang: lang.current.value,
-            SatisfactionKey: firstKey.current.value,
-            SatisfactionValue: firstValue.current.value,
-            YearsExpkey: secondKey.current.value,
-            YearsExpValue: secondValue.current.value,
-            StaffCountKey: thirdKey.current.value,
-            StaffCountValue: thirdValue.current.value,
-            DcKey: fourthKey.current.value,
-            Dcvalue: fourthValue.current.value,
+            StringKey: title.current.value,
+            StringValue: body.current.value,
+            images: image.current.files[0],
         })
     }
 
@@ -94,56 +84,21 @@ const AddSec6 = ({ baseURL }) => {
                                         <Col xl={6} lg={6} md={6} sm={12} className="app__addprodects-form-en">
                                             <Form.Group controlId="formBasicFirstKey">
                                                 <Form.Label>First Key</Form.Label>
-                                                <Form.Control type="text" name='firstKey' ref={firstKey} />
+                                                <Form.Control type="text" name='firstKey' ref={title} />
                                             </Form.Group>
                                         </Col>
 
                                         <Col xl={6} lg={6} md={6} sm={12} className="app__addprodects-form-en">
                                             <Form.Group controlId="formBasicFirstValue">
                                                 <Form.Label>First Value</Form.Label>
-                                                <Form.Control type="number" name='firstValue' ref={firstValue} />
+                                                <Form.Control type="number" name='firstValue' ref={body} />
                                             </Form.Group>
                                         </Col>
 
                                         <Col xl={6} lg={6} md={6} sm={12} className="app__addprodects-form-en">
-                                            <Form.Group controlId="formBasicSecondKey">
-                                                <Form.Label>Second Key</Form.Label>
-                                                <Form.Control type="text" name='secondKey' ref={secondKey} />
-                                            </Form.Group>
-                                        </Col>
-
-                                        <Col xl={6} lg={6} md={6} sm={12} className="app__addprodects-form-en">
-                                            <Form.Group controlId="formBasicSecondValue">
-                                                <Form.Label>Second Value</Form.Label>
-                                                <Form.Control type="number" name='secondValue' ref={secondValue} />
-                                            </Form.Group>
-                                        </Col>
-
-                                        <Col xl={6} lg={6} md={6} sm={12} className="app__addprodects-form-en">
-                                            <Form.Group controlId="formBasicThirdKey">
-                                                <Form.Label>Third Key</Form.Label>
-                                                <Form.Control type="text" name='thirdKey' ref={thirdKey} />
-                                            </Form.Group>
-                                        </Col>
-
-                                        <Col xl={6} lg={6} md={6} sm={12} className="app__addprodects-form-en">
-                                            <Form.Group controlId="formBasicThirdValue">
-                                                <Form.Label>Third Value</Form.Label>
-                                                <Form.Control type="number" name='thirdValue' ref={thirdValue} />
-                                            </Form.Group>
-                                        </Col>
-
-                                        <Col xl={6} lg={6} md={6} sm={12} className="app__addprodects-form-en">
-                                            <Form.Group controlId="formBasicFourthKey">
-                                                <Form.Label>Fourth Key</Form.Label>
-                                                <Form.Control type="text" name='fourthKey' ref={fourthKey} />
-                                            </Form.Group>
-                                        </Col>
-
-                                        <Col xl={6} lg={6} md={6} sm={12} className="app__addprodects-form-en">
-                                            <Form.Group controlId="formBasicFourthValue">
-                                                <Form.Label>Fourth Value</Form.Label>
-                                                <Form.Control type="number" name='fourthValue' ref={fourthValue} />
+                                            <Form.Group controlId="formBasicImage">
+                                                <Form.Label>Image</Form.Label>
+                                                <Form.Control type="file" name='image' ref={image} />
                                             </Form.Group>
                                         </Col>
 

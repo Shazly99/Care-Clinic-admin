@@ -31,14 +31,9 @@ function Sec6Table({ usersList , getList , baseURL }) {
                 <thead>
                     <tr className='text-center  ' style={{ background: '#F9F9F9' }}>
                         <th>Lang</th>
-                        <th>1th Lable</th>
-                        <th>1th Value</th>
-                        <th>2th Lable</th>
-                        <th>2th Value</th>
-                        <th>3th Lable</th>
-                        <th>3th Value</th>
-                        <th>4th Lable</th>
-                        <th>4th Value</th>
+                        <th>Title</th>
+                        <th>Value</th>
+                        <th>Image</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -58,42 +53,21 @@ function Sec6Table({ usersList , getList , baseURL }) {
                                 </td>
                                 <td >
                                     <div>
-                                        {item?.SatisfactionKey}
+                                        {item?.StringKey}
                                     </div>
                                 </td>
                                 <td >
                                     <div>
-                                        {item?.SatisfactionValue}
+                                        {item?.StringValue}
                                     </div>
                                 </td>
                                 <td >
-                                    <div>
-                                        {item?.YearsExpkey}
-                                    </div>
-                                </td>
-                                <td >
-                                    <div>
-                                        {item?.YearsExpValue}
-                                    </div>
-                                </td>
-                                <td >
-                                    <div>
-                                        {item?.StaffCountKey}
-                                    </div>
-                                </td>
-                                <td >
-                                    <div>
-                                        {item?.StaffCountValue}
-                                    </div>
-                                </td>
-                                <td >
-                                    <div>
-                                        {item?.DcKey}
-                                    </div>
-                                </td>
-                                <td >
-                                    <div>
-                                        {item?.Dcvalue}
+                                    <div style={{ width: '200px' , height: '120px'}}>
+                                        {item?.fileUrl !== null && item?.fileUrl !== undefined ? 
+                                            <img src={`https://cureclinckapi.amlakturks.com/storage/app/section6/${item?.fileUrl}`} className='rounded-3 w-100 h-100' loading="lazy" alt="item-image" />
+                                            :
+                                            '_'
+                                        }
                                     </div>
                                 </td>
                                 <td>

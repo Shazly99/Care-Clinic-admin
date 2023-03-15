@@ -64,6 +64,9 @@ const Sec3 = () => {
                                             <div >
                                                 {item.Lang === '1' && "Arabic"}
                                                 {item.Lang === '2' && "English"}
+                                                {item.Lang === '3' && "French"}
+                                                {item.Lang === '4' && "Russian"}
+                                                {item.Lang === '5' && "Turkish"}
                                             </div>
                                         </td>
                                         <td >

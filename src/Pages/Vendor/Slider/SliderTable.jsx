@@ -45,6 +45,8 @@ function SliderTable({ usersList , getList , baseURL }) {
                                         {item.sect === '1' && "Slide 1"}
                                         {item.sect === '2' && "Slide 2"}
                                         {item.sect === '3' && "Slide 3"}
+                                        {item.sect === '4' && "Slide 4"}
+                                        {item.sect === '5' && "Slide 5"}
                                     </div>
                                 </td>
                                 <td >

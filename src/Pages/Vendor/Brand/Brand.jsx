@@ -15,7 +15,6 @@ const Brand = () => {
     const BrandGet = async () => {
         let { data } = await axios.get(`https://cureclinckapi.amlakturks.com/public/api/getbrands`);
         setBrand(data.data);
-        console.log(data.data);
     }
 
     const handleActionSelect = async (id, action) => {

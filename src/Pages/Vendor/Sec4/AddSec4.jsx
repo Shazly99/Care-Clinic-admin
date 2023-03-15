@@ -18,7 +18,7 @@ const AddSec4 = () => {
       e.preventDefault()
       addNewAds({
           Lang: LangRef.current.value,
-          VideoURL: VideoURLRef.current.value,
+        //   VideoURL: VideoURLRef.current.value,
           Title: TitleRef.current.value, 
           body: bodyRef.current.value,
  
@@ -51,7 +51,7 @@ return (
   <>
           <Container fluid>
           <div className="app__addprodects">
-              <Component.SubNav sub__nav={[{ name: " Section 4 ", path: '/section4' }, { name: "Add section 3  ", path: '/section4/addsection4' }]} />
+              <Component.SubNav sub__nav={[{ name: " Section 4 ", path: '/section4' }, { name: "Add Item", path: '/section4/addsection4' }]} />
 
               <div className="app__addprodects__header ">
                   <Component.BaseHeader h1={'Add New Ads'} />
@@ -75,24 +75,26 @@ return (
                                           </Form.Select>
                                       </Form.Group>
 
-                                      <Form.Group controlId="formBasicEndDate" className='mt-3'>
+                                      {/* <Form.Group controlId="formBasicEndDate" className='mt-3'>
                                           <Form.Label>VideoURL :</Form.Label>
                                           <InputGroup>
                                               <FormControl type="text" ref={VideoURLRef} />
                                           </InputGroup>
-                                      </Form.Group> 
+                                      </Form.Group>  */}
 
-                                  </Col>
-
-                                  <Col xl={6} lg={6} md={6} sm={12} className="app__addprodects-form-en">
-                                  <Form.Group controlId="formBasicEndDate" className='mt-3'>
-                                          <Form.Label>Title :</Form.Label>
+                                      <Form.Group controlId="formBasicEndDate" className='mt-3'>
+                                          <Form.Label>Title</Form.Label>
                                           <InputGroup>
                                               <FormControl type="text" ref={TitleRef} />
                                           </InputGroup>
                                       </Form.Group>
-                                  <Form.Group controlId="formBasicEndDate" className='mt-3'>
-                                          <Form.Label>body :</Form.Label>
+
+                                  </Col>
+
+                                  <Col xl={6} lg={6} md={6} sm={12} className="app__addprodects-form-en">
+
+                                      <Form.Group controlId="formBasicEndDate" className='mt-3'>
+                                          <Form.Label>body</Form.Label>
                                           <InputGroup>
                                               <FormControl type="text" ref={bodyRef} />
                                           </InputGroup>

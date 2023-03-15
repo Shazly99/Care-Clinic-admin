@@ -48,7 +48,7 @@ const Sec4 = () => {
                                     <tr className='text-center  ' style={{ background: '#F9F9F9' }}>
                                         <th>Lang</th>
 
-                                        <th> VideoURL</th>
+                                        {/* <th> VideoURL</th> */}
                                         <th>Title </th>
                                         <th>body </th>
                                         <th> Actions</th>
@@ -62,15 +62,18 @@ const Sec4 = () => {
                                                     <div >
                                                         {item.Lang === '1' && "Arabic"}
                                                         {item.Lang === '2' && "English"}
+                                                        {item.Lang === '3' && "French"}
+                                                        {item.Lang === '4' && "Russian"}
+                                                        {item.Lang === '5' && "Turkish"}
                                                     </div>
                                                 </td>
 
 
-                                                <td >
+                                                {/* <td >
                                                     <div >
                                                         {item.VideoURL}
                                                     </div>
-                                                </td>
+                                                </td> */}
                                                 <td >
                                                     <div >
                                                         {item.Title}
