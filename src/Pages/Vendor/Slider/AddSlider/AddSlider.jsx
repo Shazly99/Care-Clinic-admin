@@ -44,7 +44,7 @@ const AddSec6 = ({ baseURL }) => {
                 });
                 setTimeout(() => {
                     navigate('/slider');
-                }, 2000);
+                }, 500);
             }else{
                 toast.error(res.data.message)
             }

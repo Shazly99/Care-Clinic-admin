@@ -45,7 +45,7 @@ const AddSec3 = () => {
                 });
                 setTimeout(() => {
                     navigate('/section3');
-                }, 2000);
+                }, 500);
             } else {
                 toast.error(res.data.message)
             }

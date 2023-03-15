@@ -58,7 +58,7 @@ const AddSec6 = ({ baseURL }) => {
                 });
                 setTimeout(() => {
                     navigate('/section6');
-                }, 2000);
+                }, 500);
             }else{
                 toast.error(res.data.message)
             }

@@ -55,7 +55,7 @@ const AddContactus = () => {
                 });
                 setTimeout(() => {
                     navigate('/contactus');
-                }, 2000);
+                }, 500);
             } else {
                 toast.error(res.data.message)
             }
