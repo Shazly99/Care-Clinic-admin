@@ -94,8 +94,7 @@ const AddContactus = () => {
                                             <InputGroup>
                                                 <FormControl type="text" ref={LongitRef} />
                                             </InputGroup>
-                                        </Form.Group>
-
+                                        </Form.Group> 
 
                                         <Form.Group controlId="formBasicEndDate" className='mt-3'>
                                             <Form.Label>Lat</Form.Label>
