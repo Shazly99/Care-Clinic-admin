@@ -72,7 +72,7 @@ const AddSec6 = ({ baseURL }) => {
                                                     <option value="2">Slide 2</option>
                                                     <option value="3">Slide 3</option>
                                                     <option value="4">Slide 4</option>
-                                                    <option value="5">Slide 4 (Header)</option>
+                                                    <option value="5">Slide 5 (Header)</option>
                                                 </Form.Select>
                                             </Form.Group>
                                         </Col>
