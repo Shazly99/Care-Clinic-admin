@@ -92,7 +92,7 @@ const AddContactus = () => {
                                         <Form.Group controlId="formBasicEndDate" className='mt-3'>
                                             <Form.Label>Longit</Form.Label>
                                             <InputGroup>
-                                                <FormControl type="number" ref={LongitRef} />
+                                                <FormControl type="text" ref={LongitRef} />
                                             </InputGroup>
                                         </Form.Group>
 
@@ -100,7 +100,7 @@ const AddContactus = () => {
                                         <Form.Group controlId="formBasicEndDate" className='mt-3'>
                                             <Form.Label>Lat</Form.Label>
                                             <InputGroup>
-                                                <FormControl type="number" ref={LatRef} />
+                                                <FormControl type="text" ref={LatRef} />
                                             </InputGroup>
                                         </Form.Group>
 
