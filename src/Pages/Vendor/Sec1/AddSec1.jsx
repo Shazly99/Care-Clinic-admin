@@ -49,7 +49,8 @@ const AddSec1 = () => {
             }
         });
     }
-
+    
+   
   return(
     <>
             <Container fluid>
@@ -61,8 +62,7 @@ const AddSec1 = () => {
                     <div className="app__addOrder-form">
 
                         <div className="app__addprodects-form">
-                            <form onSubmit={submit}>
-
+                            <form onSubmit={submit}> 
 
                                 <Row>
                                     <Col xl={6} lg={6} md={6} sm={12} className="app__addprodects-form-en">
@@ -91,15 +91,7 @@ const AddSec1 = () => {
                                             <InputGroup>
                                                 <FormControl type="text" ref={BigOneRef} />
                                             </InputGroup>
-                                        </Form.Group>
-
-                            
-
-
-
-
-   
-
+                                        </Form.Group> 
 
                                     </Col>
 

@@ -12,8 +12,7 @@ const Sec1 = () => {
     // get contactusSubCategories
     const contactusGet = async () => {
         let { data } = await axios.get(`https://cureclinckapi.amlakturks.com/public/api/getsection1`);
-        setContactus(data.data);
-        console.log(data.data);
+        setContactus(data.data); 
     }
 
     const handleActionSelect = async (id, action) => {
@@ -117,7 +116,7 @@ const Sec1 = () => {
                                                                 className="DropdownButton "
                                                                 drop={'down-centered'}
                                                             >
-                                                                <Dropdown.Item eventKey="Edite" as={Link} to={`/contactus/editcontactus/${item.ID}`}>
+                                                                <Dropdown.Item eventKey="Edite" as={Link} to={`/section1/editsection1/${item.ID}`}>
                                                                     Edit
                                                                 </Dropdown.Item>
 

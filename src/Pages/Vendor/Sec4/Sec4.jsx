@@ -97,7 +97,7 @@ const Sec4 = () => {
                                                                 className="DropdownButton "
                                                                 drop={'down-centered'}
                                                             >
-                                                                <Dropdown.Item eventKey="Edite" as={Link} to={`/contactus/editcontactus/${item.ID}`}>
+                                                                <Dropdown.Item eventKey="Edite" as={Link} to={`/section4/editsection4/${item.ID}`}>
                                                                     Edit
                                                                 </Dropdown.Item>
 

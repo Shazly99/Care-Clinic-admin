@@ -31,24 +31,7 @@ const Edit = () => {
     }
 
     const submit = e => {
-        e.preventDefault()
-        /*        setData({
-                   UserEmail: email.current.value,
-                   UserPassword: password.current.value,
-                   UserPhone: '+' + phoneNumber,
-                   UserPhoneFlag: '+' + Country,
-                   UserName: username.current.value,
-                   IDCity: 1,
-                   IDUser: id
-               }) */
-        // console.log({
-        //     UserEmail: email.current.value,
-        //     UserPassword: password.current.value,
-        //     UserPhone: '+' + phoneNumber,
-        //     UserPhoneFlag: '+' + Country,
-        //     UserName: username.current.value,
-        //     IDCity: 1
-        // });
+        e.preventDefault() 
         addNewUser({
             UserEmail: email.current.value,
             UserPassword: password.current.value,
