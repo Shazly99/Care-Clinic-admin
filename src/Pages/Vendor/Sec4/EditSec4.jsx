@@ -82,7 +82,7 @@ const EditSec4 = () => {
                                     <Form.Select aria-label="Default select example" ref={LangRef} >
                                         {
                                             [{ id: 1, lang: 'Arabic' }, { id: 2, lang: 'English' }, { id: 3, lang: 'French' }, { id: 4, lang: 'Russian' }, { id: 5, lang: 'Turkish' }]?.map((item, index) => (
-                                                <option key={index} value={item.id}   >{item.lang}</option>
+                                                <option key={index} value={item.id} selected={Number(editPage?.Lang) === Number(item.id)  && item.lang } >{item.lang}</option>
                                             ))
                                         }
                                     </Form.Select>
