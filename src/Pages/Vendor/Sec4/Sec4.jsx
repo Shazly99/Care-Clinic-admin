@@ -13,7 +13,6 @@ const Sec4 = () => {
     const contactusGet = async () => {
         let { data } = await axios.get(`https://cureclinckapi.amlakturks.com/public/api/getsection4`);
         setContactus(data.data);
-        console.log(data.data);
     }
 
     const handleActionSelect = async (id, action) => {

@@ -68,9 +68,9 @@ function SliderTable({ usersList , getList , baseURL }) {
                                                 variant="outline-success"
                                                 className="DropdownButton "
                                             >
-                                                <Dropdown.Item eventKey="Edite" as={Link} to={`edit/${item.ID}`}>
+                                                {/* <Dropdown.Item eventKey="Edite" as={Link} to={`edit/${item.ID}`}>
                                                     Edit
-                                                </Dropdown.Item>
+                                                </Dropdown.Item> */}
                                                 <Dropdown.Item eventKey="DELETED" onClick={handleShowRemove}>Deleted</Dropdown.Item>
 
                                                 <Modal style={{ zIndex: '9999999999' }} show={showRemove} onHide={handleCloseRemove} centered>

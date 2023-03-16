@@ -14,7 +14,6 @@ const Sec3 = () => {
     const contactusGet = async () => {
         let { data } = await axios.get(`https://cureclinckapi.amlakturks.com/public/api/getsection3`);
         setContactus(data.data);
-        console.log(data.data);
     }
 
     const handleActionSelect = async (id, action) => {

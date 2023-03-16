@@ -34,7 +34,7 @@ function App() {
           path: '/brand', children: [
             { index: true, element: <ProtectedRoutes>  <Component.Brand /> </ProtectedRoutes> },
             { path: 'addbrand', element: <ProtectedRoutes> <Component.AddBrand /></ProtectedRoutes> },
-            { path: 'editbrand/:id', element: <ProtectedRoutes>  <Component.EditBrand /> </ProtectedRoutes> },
+            // { path: 'editbrand/:id', element: <ProtectedRoutes>  <Component.EditBrand /> </ProtectedRoutes> },
 
           ]
         },
@@ -104,7 +104,7 @@ function App() {
           path: '/slider', children: [
             { index: true, element: <ProtectedRoutes>  <Component.Slider baseURL={baseURL} /> </ProtectedRoutes> },
             { path: 'add', element: <ProtectedRoutes> <Component.AddSlider baseURL={baseURL} /></ProtectedRoutes> },
-            { path: 'edit/:id', element: <ProtectedRoutes>  <Component.EditSlider baseURL={baseURL} /> </ProtectedRoutes> },
+            // { path: 'edit/:id', element: <ProtectedRoutes>  <Component.EditSlider baseURL={baseURL} /> </ProtectedRoutes> },
           ]
         }, 
 

@@ -36,7 +36,7 @@ const EditSec4 = () => {
 
       if (res.data.message === "success") {
         toast.success('updated successfully!', {
-          duration: 4000,
+          duration: 500,
           position: 'top-center',
           icon: <Icons.upload color='#40AB45' size={25} />,
           iconTheme: {
@@ -55,11 +55,9 @@ const EditSec4 = () => {
   const diplayUserData = async () => {
     let { data } = await GetData(`${BASE_URL}Getsection4ByID?ID=${id}`)
     setgetSec(data.data);
-    console.log(data.data);
   }
   useEffect(() => {
     diplayUserData()
-    console.log(id);
   }, [id])
   return (
     <Container fluid>
