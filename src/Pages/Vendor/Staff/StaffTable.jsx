@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Table, DropdownButton, Dropdown, Modal, Button } from "react-bootstrap";
 import { apiheader } from '../../../utils/fetchData.js';
 import { Link } from 'react-router-dom';
-import oops from '../../../assets/Images/users/Z.jfif';
+import oops from '../../../assets/Images/users/oops.png';
 import axios from 'axios';
 
 

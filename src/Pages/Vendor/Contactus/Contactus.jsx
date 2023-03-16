@@ -4,7 +4,7 @@ import { Button, Modal, Dropdown, DropdownButton, Table } from "react-bootstrap"
 import { Link } from 'react-router-dom';
 import Component from '../../../constants/Component';
 import Icons from '../../../constants/Icons';
-import oops from '../../../assets/Images/users/Z.jfif';
+import oops from '../../../assets/Images/users/oops.png';
 
 
 const Contactus = () => {
