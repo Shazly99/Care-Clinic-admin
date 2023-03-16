@@ -34,7 +34,7 @@ const AddSec6 = ({ baseURL }) => {
         .then((res) => {
             if (res.data.message === 'success') {
                 toast.success('New item added successfully!', {
-                    duration: 2000,
+                    duration: 500,
                     position: 'top-center',  
                     icon: <Icons.Added color='#40AB45' size={25}/>, 
                     iconTheme: {

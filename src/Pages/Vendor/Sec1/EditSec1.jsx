@@ -41,7 +41,7 @@ const EditSec1 = () => {
 
       if (res.data.message === "success") {
         toast.success('updated successfully!', {
-          duration: 4000,
+          duration: 500,
           position: 'top-center',
           icon: <Icons.upload color='#40AB45' size={25} />,
           iconTheme: {
@@ -60,11 +60,9 @@ const EditSec1 = () => {
   const diplayUserData = async () => {
     let { data } = await GetData(`${BASE_URL}Getsection1ByID?ID=${id}`)
     setgetSec(data.data);
-    console.log(data.data);
   }
   useEffect(() => {
     diplayUserData()
-    console.log(id);
   }, [id])
   return (
     <Container fluid>
@@ -72,7 +70,7 @@ const EditSec1 = () => {
         <Component.SubNav sub__nav={[{ name: "Section 1", path: '/section1 ' }, { name: "Edit Section 1 ", path: `/section1/editsection1/${id}` }]} />
 
         <div className="app__addprodects__header ">
-          <Component.BaseHeader h1={'Edit Animal Cutting'} />
+          <Component.BaseHeader h1={'Edit an Item'} />
           <div className="app__addOrder-form">
             <div className="app__addprodects-form">
               <form onSubmit={submit}>

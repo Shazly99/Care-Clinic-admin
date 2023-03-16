@@ -45,7 +45,7 @@ const AddContactus = () => {
 
             if (res.data.message === "success") {
                 toast.success('New ads added successfully!', {
-                    duration: 4000,
+                    duration: 500,
                     position: 'top-center',
                     icon: <Icons.Added color='#40AB45' size={25} />,
                     iconTheme: {

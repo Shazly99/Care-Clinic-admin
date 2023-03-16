@@ -33,7 +33,7 @@ const AddSec1 = () => {
 
             if (res.data.message === "success") {
                 toast.success('New ads added successfully!', {
-                    duration: 4000,
+                    duration: 500,
                     position: 'top-center',
                     icon: <Icons.Added color='#40AB45' size={25} />,
                     iconTheme: {
@@ -58,7 +58,7 @@ const AddSec1 = () => {
                 <Component.SubNav sub__nav={[{ name: " Section 1 ", path: '/section1' }, { name: "Add Item ", path: '/section1/addsection1' }]} />
 
                 <div className="app__addprodects__header ">
-                    <Component.BaseHeader h1={'Add New Ads'} />
+                    <Component.BaseHeader h1={'Add New Item'} />
                     <div className="app__addOrder-form">
 
                         <div className="app__addprodects-form">
@@ -70,6 +70,7 @@ const AddSec1 = () => {
                                         <Form.Group controlId="formBasicEmail" className='mt-3'>
                                             <Form.Label>Lang</Form.Label>
                                             <Form.Select aria-label="Default select example" ref={LangRef} >
+                                                <option>Access Language</option>
                                                 {
                                                     [{ id: 1, lang: 'Arabic' }, { id: 2, lang: 'English' }, { id: 3, lang: 'French' }, { id: 4, lang: 'Russian' }, { id: 5, lang: 'Turkish' }]?.map((item, index) => (
                                                         <option key={index} value={item.id}   >{item.lang}</option>

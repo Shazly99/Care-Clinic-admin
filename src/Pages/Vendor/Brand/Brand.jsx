@@ -70,9 +70,9 @@ const Brand = () => {
                                                         className="DropdownButton "
                                                         drop={'down-centered'}
                                                     >
-                                                        <Dropdown.Item eventKey="Edite" as={Link} to={`/Brands/subcategories/editsubcategories/${item.IDBrandSubCategory}`}>
+                                                        {/* <Dropdown.Item eventKey="Edite" as={Link} to={`/Brands/subcategories/editsubcategories/${item.IDBrandSubCategory}`}>
                                                             Edit
-                                                        </Dropdown.Item>
+                                                        </Dropdown.Item> */}
 
                                                         <Dropdown.Item eventKey="DELETED">Deleted</Dropdown.Item>
                                                         <Modal show={showDeleteModal} onHide={() => setShowDeleteModal(false)} centered>

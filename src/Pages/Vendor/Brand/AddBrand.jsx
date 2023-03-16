@@ -23,10 +23,9 @@ const AddBrand = () => {
         e.preventDefault()
         console.log({  images: selectedImage });
         await axios.post(`https://cureclinckapi.amlakturks.com/public/api/Addbrands`, {  images:  selectedImage  },apiheader).then((res) => {
-            console.log(res);
             if (res.data.message === "success") {
                 toast.success('New ads Brand successfully!', {
-                    duration: 4000,
+                    duration: 500,
                     position: 'top-center',
                     icon: <Icons.Added color='#40AB45' size={25} />,
                     iconTheme: {

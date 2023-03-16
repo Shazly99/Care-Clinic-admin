@@ -52,7 +52,7 @@ const EditContactus = () => {
 
       if (res.data.message === "success") {
         toast.success('updated successfully!', {
-          duration: 4000,
+          duration: 500,
           position: 'top-center',
           icon: <Icons.upload color='#40AB45' size={25} />,
           iconTheme: {
@@ -71,11 +71,9 @@ const EditContactus = () => {
   const diplayUserData = async () => {
     let { data } = await GetData(`${BASE_URL}GetcontactusByID?ID=${id}`)
     setgetSec(data.data);
-    console.log(data.data);
   }
   useEffect(() => {
     diplayUserData()
-    console.log(id);
   }, [id])
   return (
     <Container fluid>
@@ -83,7 +81,7 @@ const EditContactus = () => {
         <Component.SubNav sub__nav={[{ name: " Contact Us", path: '/contactus' }, { name: "Edit Contact Us  ", path: `/contactus/editcontactus/${id}` }]} />
 
         <div className="app__addprodects__header ">
-            <Component.BaseHeader h1={'Add New Ads'} />
+            <Component.BaseHeader h1={'Edit Contact Us'} />
             <div className="app__addOrder-form"> 
                 <div className="app__addprodects-form">
                     <form onSubmit={submit}> 

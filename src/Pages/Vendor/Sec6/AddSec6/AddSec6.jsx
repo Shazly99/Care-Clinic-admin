@@ -38,7 +38,7 @@ const AddSec6 = ({ baseURL }) => {
         .then((res) => {
             if (res.data.message === 'success') {
                 toast.success('New item added successfully!', {
-                    duration: 2000,
+                    duration: 500,
                     position: 'top-center',  
                     icon: <Icons.Added color='#40AB45' size={25}/>, 
                     iconTheme: {
@@ -83,14 +83,14 @@ const AddSec6 = ({ baseURL }) => {
 
                                         <Col xl={6} lg={6} md={6} sm={12} className="app__addprodects-form-en">
                                             <Form.Group controlId="formBasicFirstKey">
-                                                <Form.Label>First Key</Form.Label>
+                                                <Form.Label>Key</Form.Label>
                                                 <Form.Control type="text" name='firstKey' ref={title} />
                                             </Form.Group>
                                         </Col>
 
                                         <Col xl={6} lg={6} md={6} sm={12} className="app__addprodects-form-en">
                                             <Form.Group controlId="formBasicFirstValue">
-                                                <Form.Label>First Value</Form.Label>
+                                                <Form.Label>Value</Form.Label>
                                                 <Form.Control type="number" name='firstValue' ref={body} />
                                             </Form.Group>
                                         </Col>
