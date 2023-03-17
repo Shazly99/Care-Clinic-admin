@@ -22,8 +22,8 @@ const EditSec2 = () => {
     const [editPage, setgetSec] = useState(null)
   
     const submit = e => {
-      e.preventDefault()
-      {image?.current?.files?.length > 0 ?
+      e.preventDefault();
+      {image?.current?.files?.length === 1 ?
         editSec({
           Body: body.current.value,
           images: image.current.files[0],
@@ -42,8 +42,11 @@ const EditSec2 = () => {
     }
   
     async function editSec(update) {
-      await axios.post(`${BASE_URL}Updatesection2`, update).then((res) => {
-  
+      await axios.post(`${BASE_URL}Updatesection2`, update , {
+        headers: {
+            'Content-Type': 'multipart/form-data',
+        } 
+    }).then((res) => {
         if (res.data.message === "success") {
           toast.success('updated successfully!', {
             duration: 500,

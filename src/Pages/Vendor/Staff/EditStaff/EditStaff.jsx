@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
 import Component from '../../../../constants/Component';
-import { Container, Form, Row, Col, Button, InputGroup, FormControl } from 'react-bootstrap';
+import { Container, Form, Row, Col, Button } from 'react-bootstrap';
 import Icons from '../../../../constants/Icons';
 import { Link } from 'react-router-dom';
 import { GetData } from '../../../../utils/fetchData'; 
@@ -16,22 +16,22 @@ const EditStaff = () => {
   
     const nameReq = useRef();
     const desc = useRef();
-    const images = useRef();
+    const image = useRef();
   
     const [editPage, setgetSec] = useState(null)
   
     const submit = e => {
       e.preventDefault()
-      {images?.current?.files?.length > 0 ?
+      {image?.current?.files?.length === 1 ?
         editSec({
-          NameReq: nameReq.current.value,
-          images: images.current.files[0],
+          Namereq: nameReq.current.value,
+          images: image.current.files[0],
           Desc: desc.current.value,
           ID: id
         })
         :
         editSec({
-          NameReq: nameReq.current.value,
+          Namereq: nameReq.current.value,
           Desc: desc.current.value,
           ID: id
         })
@@ -39,7 +39,11 @@ const EditStaff = () => {
     }
   
     async function editSec(update) {
-      await axios.post(`${BASE_URL}Updatestaff`, update).then((res) => {
+      await axios.post(`${BASE_URL}Updatestaff`, update , {
+        headers: {
+            'Content-Type': 'multipart/form-data',
+        } 
+      }).then((res) => {
   
         if (res.data.message === "success") {
           toast.success('updated successfully!', {
@@ -94,7 +98,7 @@ const EditStaff = () => {
 
                                           <Form.Group controlId="formBasicImage">
                                               <Form.Label>Image</Form.Label>
-                                              <Form.Control type="file" name='image' ref={images} />
+                                              <Form.Control type="file" name='image' ref={image} />
                                           </Form.Group>
 
                                       </Col>
