@@ -1,7 +1,8 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
 import Img from '../../../assets/Img';
-import Component from '../../../constants/Component';
+// import Img2 from '../../../assets/Images/Logo2.png';
+// import Component from '../../../constants/Component';
 import "./login.scss";
 import axios from 'axios';
 import { toast } from 'react-hot-toast';
@@ -33,8 +34,7 @@ const Login = () => {
             console.log(values);
             if (values) {
                 let { data } = await axios.post(`https://bytrh.com/api/admin/login`, values);
-                if (data.Success == true) { 
-                    // console.log(data.Response.AccessToken);
+                if (data.Success === true) { 
                     localStorage.setItem("token", data.Response.AccessToken);
                     localStorage.setItem("IDUser", data.Response.IDUser);
                     toast.success(data.ApiMsg);
@@ -58,8 +58,7 @@ const Login = () => {
             if (values) {
                 let { data } = await axios.post(`https://bytrh.com/api/admin/login`, values);
                 console.log(data);
-                if (data.Success == true) {
-                    console.log(data.Response.AccessToken);
+                if (data.Success === true) {
                     localStorage.setItem("token", data.Response.AccessToken);
                     localStorage.setItem("IDUser", data.Response.IDUser);
 
@@ -84,7 +83,8 @@ const Login = () => {
                     <Row>
                         <Col xl={6} lg={6} xd={6} sm={12} className='vh-100'>
                             <div className='app__login-left  vh-100   '>
-                                <img src={Img.logo} /> 
+                                <img src={Img.logo} alt='login-img' /> 
+                                {/* <img src={Img2} alt='login-img' />  */}
                                 <div className="w-75" >
                                     {
                                         !anthorWay ?
@@ -113,7 +113,7 @@ const Login = () => {
                                                     {formikPhoneNumber.errors.Password ? <span className='error__handel'>{formikPhoneNumber.errors.Password}</span> : null}
                                                 </div>
                                                 <button className='app__login-btn mt-3' type='submit'>Login</button>
-                                                <a className='anther_way_toLgoin ' onClick={() => setAnthorWay(!anthorWay)} >Do you want to log in with email?</a>
+                                                {/* <span className='anther_way_toLgoin ' onClick={() => setAnthorWay(!anthorWay)} >Do you want to log in with email?</span> */}
                                             </form>   :
                                             <form onSubmit={formik.handleSubmit}>
                                                 <div className="email ">
@@ -140,14 +140,14 @@ const Login = () => {
                                                     {formik.errors.Password ? <span className='error__handel'>{formik.errors.Password}</span> : null}
                                                 </div>
                                                 <button className='app__login-btn mt-3' type='submit'>Login</button>
-                                                <a className='anther_way_toLgoin ' onClick={() => setAnthorWay(!anthorWay)} >Do you want to log in with phone number?</a>
+                                                <span className='anther_way_toLgoin ' onClick={() => setAnthorWay(!anthorWay)} >Do you want to log in with phone number?</span>
                                             </form>
                                     }
                                 </div>
                             </div>
                         </Col> 
                         <Col xl={6} lg={6} xd={6} sm={12} className='avatar'>
-                            <img src={Img.avatar}  className='w-100'    />
+                            <img src={Img.avatar}  className='w-100'  alt='login'  />
                         </Col>
                     </Row>
                 </Container>
